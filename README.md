@@ -1,2 +1,2 @@
 # lecciones
-Material de apoyo para las clases particulares
+Problemas resueltos para llevar a las clases particulares
