@@ -122,7 +122,7 @@ x = sp.Symbol('x');
 N = sp.Matrix(( [x, 4], [1, x] ));
 detN = N.det();
 solN = solve(detN, x);
-print('El determinante de N vale', detN, '\n Se anula en...', solN)
+print('El determinante de N vale', detN, '\n Se anula en', solN, '\n')
 #### Caso k = 2 #####
 N0 = N.subs(x, 2);
 n0 = N0.rank();
@@ -131,7 +131,7 @@ N1 = N.subs(x, -2);
 n1 = N1.rank();
 ##### Conclusion #####
 print('Conclusion final:')
-print('\n Si k no vale', solN, 'entonces el rango es 2.' 
+print(' Si k no vale', solN, 'entonces el rango es 2.' 
       '\n Si k = 2, entonces el rango es', n0, 
       '\n Si k = -2, entonces el rango es', n1,'. \n \n')
 
@@ -145,7 +145,7 @@ Q2 = sp.Matrix(( [1, 0, -1], [0, 0, 3] ));
 Q2 = Q2.transpose()
 ### Solucion ####
 Q3 = Q1*Q2
-print('El producto de Q1 por Q2 da', Q3, '\n')
+print('El producto de Q1 por Q2 da', Q3)
 
 
 ### Multiplica P1 por P2 ####
