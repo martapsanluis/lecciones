@@ -113,9 +113,40 @@ print('\n Si k no vale', sol, 'entonces el rango es 3.'
       '\n Si k = 1, entonces el rango es', r1,
       '\n Si k = -1, entonces el rango es', r2,'. \n \n')
 
-##### Ejercicio extra 1 #########
+##### Ejercicio 4 ############
+print('------------------------------------------------')
+print('Ejercicio 0.4')
+print('------------------------------------------------')
+x = sp.Symbol('x');
+d1 = sp.diff(x**2, x);
+d2 = sp.diff(2*x, x);
+print('\n 1)', d1,
+      '\n 2)', d2, '\n \n')
+
+###### Ejercicio extra 1 #######
 print('------------------------------------------------')
 print('Ejercicio extra 1')
+print('------------------------------------------------')
+### Multiplica Q1 por Q2 ####
+Q1 = sp.Matrix(( [1, 0, 1], [0, 2, 3] ));
+Q2 = sp.Matrix(( [1, 0, -1], [0, 0, 3] ));
+Q2 = Q2.transpose()
+### Solucion ####
+Q3 = Q1*Q2
+print('El producto de Q1 por Q2 da', Q3)
+
+x = sp.Symbol('x');
+### Multiplica P1 por P2 ####
+P1 = sp.Matrix(( [x, 0, 1], [0, 2*x, x+1] ));
+P2 = sp.Matrix(( [x, 0, -1], [0, 0, x-3] ));
+P2 = P2.transpose()
+### Solucion ####
+P3 = P1*P2
+print('El producto de P1 por P2 da', P3, '\n \n')
+
+##### Ejercicio extra 2 #########
+print('------------------------------------------------')
+print('Ejercicio extra 2')
 print('------------------------------------------------')
 #### Estudiar el rango de N segun los valores de x ####
 x = sp.Symbol('x');
@@ -134,35 +165,3 @@ print('Conclusion final:')
 print(' Si k no vale', solN, 'entonces el rango es 2.' 
       '\n Si k = 2, entonces el rango es', n0, 
       '\n Si k = -2, entonces el rango es', n1,'. \n \n')
-
-###### Ejercicio extra 2 #######
-print('------------------------------------------------')
-print('Ejercicio extra 2')
-print('------------------------------------------------')
-### Multiplica Q1 por Q2 ####
-Q1 = sp.Matrix(( [1, 0, 1], [0, 2, 3] ));
-Q2 = sp.Matrix(( [1, 0, -1], [0, 0, 3] ));
-Q2 = Q2.transpose()
-### Solucion ####
-Q3 = Q1*Q2
-print('El producto de Q1 por Q2 da', Q3)
-
-
-### Multiplica P1 por P2 ####
-P1 = sp.Matrix(( [x, 0, 1], [0, 2*x, x+1] ));
-P2 = sp.Matrix(( [x, 0, -1], [0, 0, x-3] ));
-P2 = P2.transpose()
-### Solucion ####
-P3 = P1*P2
-print('El producto de P1 por P2 da', P3, '\n \n')
-
-##### Ejercicio 4 ############
-print('------------------------------------------------')
-print('Ejercicio 0.4')
-print('------------------------------------------------')
-d1 = sp.diff(x**2, x);
-d2 = sp.diff(2*x, x);
-print('\n 1)', d1,
-      '\n 2)', d2, '\n \n')
-
-#Holaaaaaaaaaaaaaaaaaaaaa
